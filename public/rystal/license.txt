@@ -1,0 +1,11 @@
+Model Information:
+* title:	Сrystal
+* source:	https://sketchfab.com/3d-models/rystal-e2d25ff17fcb43d889f96325dba701ef
+* author:	pronko.tata (https://sketchfab.com/pronko.tateb0776e64de54e50)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Сrystal" (https://sketchfab.com/3d-models/rystal-e2d25ff17fcb43d889f96325dba701ef) by pronko.tata (https://sketchfab.com/pronko.tateb0776e64de54e50) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
