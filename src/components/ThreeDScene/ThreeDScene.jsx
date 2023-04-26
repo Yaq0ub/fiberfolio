@@ -11,6 +11,10 @@ import { OrbitControls } from '@react-three/drei';
 // Define constants for camera settings and model paths
 const CONSTANTS = {
   camera: { position: [10, 10, 16], fov: 100 },
+  glcontext: { logarithmicDepthBuffer: true, antialias: false },
+  dpr: [1, 1.5],
+  hemisphereLight: {color: "white", groundColor: "blue", intensity: 0.75},
+  spotlight: { position : [50, 50, 10], angle: 0.9, penumbra: 1 },
 };
 
 
@@ -24,10 +28,16 @@ const ThreeDScene = () => {
         // Set the camera properties
         camera = {CONSTANTS.camera}
         // Set the WebGL context properties
-        gl = {{ logarithmicDepthBuffer: true, antialias: false }}
+        gl = {CONSTANTS.glcontext}
         // Set the device pixel ratio
-        dpr = {[1, 1.5]}
+        dpr = {CONSTANTS.dpr}
       >
+      {/* Added HemisphereLight */}
+      <hemisphereLight {...CONSTANTS.hemisphereLight} />
+
+      {/* Add spotlight */}
+      <spotLight {...CONSTANTS.spotlight} />
+
       {/* Add the model to the scene */}
       <Rystal position={[0,0,0]} />
 
