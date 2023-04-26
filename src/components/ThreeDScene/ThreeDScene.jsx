@@ -28,6 +28,7 @@ const ThreeDScene = () => {
         // Set the device pixel ratio
         dpr = {[1, 1.5]}
       >
+      {/* Add the model to the scene */}
       <Rystal position={[0,0,0]} />
 
       {/*Add Orbital Controls to the scene */}
