@@ -6,6 +6,8 @@ import Rystal from './Rystal/Rystal';
 
 import './ThreeDScene.module.css'
 
+import { OrbitControls } from '@react-three/drei';
+
 // Define constants for camera settings and model paths
 const CONSTANTS = {
   camera: { position: [10, 10, 16], fov: 100 },
@@ -27,6 +29,10 @@ const ThreeDScene = () => {
         dpr = {[1, 1.5]}
       >
       <Rystal position={[0,0,0]} />
+
+      {/*Add Orbital Controls to the scene */}
+      <OrbitControls />
+      
       </Canvas>
     </>
   )
