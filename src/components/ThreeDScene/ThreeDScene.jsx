@@ -53,7 +53,8 @@ const ThreeDScene = () => {
       <OrbitControls
           autoRotate
           enablePan={false}
-          enableZoom={true}
+          enableZoom={false}
+          enableRotate={false}
           maxPolarAngle={Math.PI / 2.5}
           minPolarAngle={Math.PI / 2.5}
         />
