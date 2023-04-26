@@ -1,12 +1,15 @@
 
 body {
-    background: #171717;
+    
     font-family: 'Inter var', sans-serif;
 }
-/**/
+/*
+background: radial-gradient(at 50% 100%, #b6b6b6 0%, #272730 40%, #373742 80%, #717177 100%);
+background: #171717;
+*/
 
 Canvas {
-    background: radial-gradient(at 50% 100%, #2dbbdf 0%, #272730 40%, #171720 80%, #070710 100%);
+    
     width: 100%;
-    height: 100%;
+    height: 200%;
 }
