@@ -1,7 +1,7 @@
 // Import the required libraries
 import React from 'react'
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, Stars } from '@react-three/drei';
 
 import Rystal  from './scene/Rystal/Rystal';
 import CustomEnvironment from './scene/CustomEnvironment';
@@ -11,12 +11,12 @@ import './ThreeDScene.module.css'
 
 // Define constants for camera settings and model paths
 const CONSTANTS = {
-  camera: { position: [10, 10, 16], fov: 100 },
+  camera: { position: [10, 10, 16], fov: 70 },
   glcontext: { logarithmicDepthBuffer: true, antialias: false },
   dpr: [1, 1.5],
   hemisphereLight: {color: "white", groundColor: "blue", intensity: 0.75},
   spotlight: { position : [30, 50, 10], angle: 0.9, penumbra: 0.5 },
-  rystal: { position: [0,0,0] }
+  rystal: { position: [0,0.25,0], flipY: true }
 };
 
 
@@ -45,13 +45,20 @@ const ThreeDScene = () => {
 
       {/* Add the custom Environment containing Light former */}
       <CustomEnvironment />
-      
+
       {/* Add Effects object containing leva controls for LUTs and other effects */}
       <Effects />
 
       {/* Add Orbital Controls to the scene */}
-      <OrbitControls />
-      
+      <OrbitControls
+          autoRotate
+          enablePan={false}
+          enableZoom={true}
+          maxPolarAngle={Math.PI / 2.5}
+          minPolarAngle={Math.PI / 2.5}
+        />
+        {/* Add  stars to the canvas*/}
+        <Stars radius={500} depth={50} count={1000} factor={10} />
       </Canvas>
     </>
   )
