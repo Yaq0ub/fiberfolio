@@ -1,3 +1,126 @@
+import logo from '../assets/images/logo.png'
+export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "resume",
+    title: "Resume"
+  },
+  {
+    id: "contact",
+    title: "Contact"
+  }
+]
+
+// List of projects
+const projects = [
+  {
+    name: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: logo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: logo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: logo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: logo,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Project",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: logo,
+    source_code_link: "https://github.com/",
+  },
+];
 // Define the base LUT folder path
 const LUT_FOLDER = "/LUTs/";
 
@@ -40,7 +163,7 @@ const scene_info = {
     dpr: [1, 1.5],
     hemisphereLight: {intensity: 0.5},
     spotlight: { position : [30, 50, 10], angle: 0.9, penumbra: 0.5 },
-    rystal: { position: [0,0.25,0], flipY: true, flipX: false },
+    rystal: { position: [0,0.25,0], flipY: false, flipX: false },
     contactshadow: {
       resolution: 1024, 
       frames: 1, 
@@ -92,21 +215,8 @@ const effects_info = {
   ior: { value: 1.45, min: 0, max: 2 },
 };
 
-export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work"
-  },
-  {
-    id: "contact",
-    title: "Contact"
-  }
-]
-export { rystal_path, effects_info, scene_info, lut_info };
+
+export { rystal_path, effects_info, scene_info, lut_info, THREEDLUT, projects };
 
 /*
 Temporal Resolve: Temporal anti-aliasing is a technique that smooths out the edges of moving objects by blending multiple frames together. This effect can reduce flickering and jagged edges in motion, resulting in a more realistic and smoother image.
