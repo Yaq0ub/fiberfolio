@@ -1,5 +1,5 @@
 // Import the useGLTF hook from @react-three/drei library
-import { useGLTF } from "@react-three/drei";
+import { useGLTF } from '@react-three/drei';
 
 // Define the BasicModel component
 function BasicModel({ url, flipX = false, flipY = false, flipZ = false, ...props }) {
