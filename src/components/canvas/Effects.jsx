@@ -3,18 +3,17 @@ import { EffectComposer, SSR, Bloom, LUT } from "@react-three/postprocessing";
 import { useControls } from "leva";
 import { LUTCubeLoader } from "postprocessing";
 
-import { effects_info, lut_info } from '../../constants'
+import { effects_info, lut_info, THREEDLUT } from '../../constants'
 
 export function Effects() {
-  const { lut } = useControls(lut_info);
+  //const { lut } = useControls(lut_info);
+  //const { enabled, ...props } = useControls(effects_info);
 
-  const texture = useLoader(LUTCubeLoader, lut);
-  const { enabled, ...props } = useControls(effects_info);
-
+  const texture = useLoader(LUTCubeLoader, "/LUTs/2-Strip-Process.cube");
   return (
-    enabled && (
+    effects_info.enabled && (
       <EffectComposer disableNormalPass>
-        <SSR {...props} />
+        <SSR {...effects_info} />
         <Bloom
           luminanceThreshold={0.2}
           mipmapBlur
