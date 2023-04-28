@@ -1,11 +1,15 @@
 // Import React and required components
 import React from 'react';
 import { useGLTF } from '@react-three/drei';
-import Navbar from './components/Navbar'
 
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import ThreeDScene from './components/canvas/ThreeDScene'
 // Import the App's CSS styles
 import './App.css';
-import ThreeDScene from './components/canvas/ThreeDScene';
+import Projects from './components/Projects';
+
+
 
 // Define constants for model paths
 const MODELS = {
@@ -15,10 +19,13 @@ const MODELS = {
 // Define the App component
 const App = () => {
   return (
-    <React.Fragment>
-      <Navbar />
-      <ThreeDScene />
-    </React.Fragment>
+    <BrowserRouter >
+      <div className=''>
+        <Navbar />
+        <ThreeDScene />
+        <Projects />
+      </div>
+    </BrowserRouter>
   );
 };
 
