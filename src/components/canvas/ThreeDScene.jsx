@@ -7,7 +7,6 @@ import Rystal from "./Rystal";
 import CustomEnvironment from "./CustomEnvironment";
 import Effects from "./Effects";
 import { scene_info } from "../../constants";
-import CameraRotation from "./CameraRotation";
 
 import "./ThreeDScene.css";
 
@@ -39,7 +38,14 @@ const ThreeDScene = () => {
         {/* Add Effects object containing leva controls for LUTs and other effects */}
         <Effects />
 
-        <CameraRotation />
+        <OrbitControls
+          autoRotate
+          enablePan={false}
+          enableZoom={false}
+          enableRotate={false}
+          maxPolarAngle={Math.PI / 3}
+          minPolarAngle={Math.PI / 3}
+        />
       </Canvas>
     </>
   );
