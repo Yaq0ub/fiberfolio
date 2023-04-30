@@ -149,21 +149,22 @@ to create an object (THREEDLUT) from the array of key-value pairs
 const THREEDLUT = Object.fromEntries(
   LUT_NAMES.map(({ key, name }) => [key, LUT_FOLDER + name + ".cube"])
 );
-
 const lut_info = { 
     lut: {
-        value: THREEDLUT.TwoStripeProcess,
+        value: THREEDLUT.TwoStripProcess,
         options: THREEDLUT,
     }
 }
+const rystal_path="/rystal/scene.gltf";
 
 const scene_info = {
-    camera: { position: [10, 10, 16], fov: 70 },
-    glcontext: { logarithmicDepthBuffer: true, antialias: false },
+    camera: { position: [10, 25, 10], fov: 50 },
+    rystal: { position: [0,0,0], flipY: true, flipX: false },
+    glcontext: { logarithmicDepthBuffer: true, antialias: true },
     dpr: [1, 1.5],
     hemisphereLight: {intensity: 0.5},
     spotlight: { position : [30, 50, 10], angle: 0.9, penumbra: 0.5 },
-    rystal: { position: [0,0.25,0], flipY: false, flipX: false },
+    
     contactshadow: {
       resolution: 1024, 
       frames: 1, 
@@ -180,7 +181,7 @@ const scene_info = {
     }
 };
 
-const rystal_path="/rystal/scene.gltf";
+
 
 const effects_info = {
   enabled: true,
@@ -216,7 +217,7 @@ const effects_info = {
 };
 
 
-export { rystal_path, effects_info, scene_info, lut_info, THREEDLUT, projects };
+export { rystal_path, effects_info, scene_info, lut_info, THREEDLUT, projects};
 
 /*
 Temporal Resolve: Temporal anti-aliasing is a technique that smooths out the edges of moving objects by blending multiple frames together. This effect can reduce flickering and jagged edges in motion, resulting in a more realistic and smoother image.
