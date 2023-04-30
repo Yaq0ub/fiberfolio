@@ -9,7 +9,7 @@ export function Effects() {
   //const { lut } = useControls(lut_info);
   //const { enabled, ...props } = useControls(effects_info);
 
-  const texture = useLoader(LUTCubeLoader, "/LUTs/2-Strip-Process.cube");
+  const texture = useLoader(LUTCubeLoader, "/LUTs/French Comedy.cube");
   return (
     effects_info.enabled && (
       <EffectComposer disableNormalPass>
