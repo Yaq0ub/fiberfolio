@@ -20,11 +20,9 @@ const MODELS = {
 const App = () => {
   return (
     <BrowserRouter >
-      <div className=''>
-        <Navbar />
+      <Navbar />
         <ThreeDScene />
         <Projects />
-      </div>
     </BrowserRouter>
   );
 };
