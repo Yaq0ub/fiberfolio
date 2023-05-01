@@ -1,4 +1,5 @@
 import logo from '../assets/images/logo.png'
+import newsapp from '../assets/images/newsapp.png'
 export const navLinks = [
   {
     id: "about",
@@ -21,23 +22,23 @@ export const navLinks = [
 // List of projects
 const projects = [
   {
-    name: "Project",
+    name: "News App",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a quam ut nisi tempus maximus sed ac magna. Donec nibh tortor, sagittis sed facilisis non, ultrices sed ligula. Morbi at neque eget erat vulputate euismod. Phasellus quis placerat lectus. Etiam ac convallis sapien, sed hendrerit dolor",
     tags: [
       {
-        name: "react",
+        name: "react native",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "REST API",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "CSS",
         color: "pink-text-gradient",
       },
     ],
-    image: logo,
+    image: newsapp,
     source_code_link: "https://github.com/",
   },
   {
